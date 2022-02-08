@@ -1,0 +1,44 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net6.0</TargetFramework>
+		<RootNamespace>appium_demo</RootNamespace>
+		<Nullable>enable</Nullable>
+
+		<IsPackable>false</IsPackable>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Appium.WebDriver" Version="5.0.0-beta01" />
+		<PackageReference Include="Microsoft.Extensions.Configuration" Version="6.0.0" />
+		<PackageReference Include="Microsoft.Extensions.Configuration.Binder" Version="6.0.0" />
+		<PackageReference Include="Microsoft.Extensions.Configuration.FileExtensions" Version="6.0.0" />
+		<PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="6.0.0" />
+		<PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.0.0" />
+		<PackageReference Include="NUnit" Version="3.13.2" />
+		<PackageReference Include="NUnit3TestAdapter" Version="4.2.0" />
+		<PackageReference Include="coverlet.collector" Version="3.1.0" />
+		<PackageReference Include="Selenium.Support" Version="4.1.0" />
+		<PackageReference Include="SpecFlow" Version="3.9.40" />
+		<PackageReference Include="SpecFlow.Assist.Dynamic" Version="1.4.2" />
+		<PackageReference Include="SpecFlow.NUnit" Version="3.9.40" />
+		<PackageReference Include="SpecFlow.Tools.MsBuild.Generation" Version="3.9.40" />
+		<PackageReference Include="Gherkin" Version="22.0.0" />
+		<PackageReference Include="SpecFlow.CustomPlugin" Version="3.9.40" />
+		<PackageReference Include="SeleniumExtras.WaitHelpers" Version="1.0.2" />
+		<PackageReference Include="FluentAssertions" Version="6.3.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <SpecFlowFeatureFiles Update="Features\FormPage.feature">
+	    <Visible>False</Visible>
+	  </SpecFlowFeatureFiles>
+	</ItemGroup>
+	<ItemGroup>
+	  <None Remove="Gherkin" />
+	  <None Remove="SpecFlow.CustomPlugin" />
+	  <None Remove="SpecRun.Runner" />
+	  <None Remove="SeleniumExtras.WaitHelpers" />
+	  <None Remove="FluentAssertions" />
+	</ItemGroup>
+</Project>
